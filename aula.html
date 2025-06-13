@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIAQUA - Videoaula</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aula.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho Principal -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo"><span>UNIAQUA</span></div>
+                <span class="tagline">Soluções em Sistemas Hidráulicos</span>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="metodologia.html">Metodologia</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > 
+            <a href="cursos.html">Cursos</a> > 
+            <a href="#" id="course-link">Projeto de Sistemas Hidráulicos</a> > 
+            <span id="lesson-title">Introdução aos Sistemas Hidráulicos</span>
+        </div>
+    </div>
+
+    <!-- Player de Vídeo -->
+    <section class="video-player-section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-player">
+                    <video id="lesson-video" controls poster="/placeholder.svg?height=400&width=800">
+                        <source src="#" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <div class="video-overlay" id="video-overlay">
+                        <div class="play-button" id="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-info">
+                    <h1 id="current-lesson-title">Introdução aos Sistemas Hidráulicos</h1>
+                    <div class="lesson-meta">
+                        <span><i class="fas fa-clock"></i> <span id="lesson-duration">12 min</span></span>
+                        <span><i class="fas fa-eye"></i> Aula <span id="lesson-number">1</span> de <span id="total-lessons">12</span></span>
+                    </div>
+                    <div class="lesson-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="lesson-progress-fill"></div>
+                        </div>
+                        <span class="progress-text" id="lesson-progress-text">0% assistido</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-content">
+                <div class="lesson-description">
+                    <h2>Sobre esta aula</h2>
+                    <div id="lesson-description-content">
+                        <p>Nesta primeira aula, você será introduzido aos conceitos fundamentais dos sistemas hidráulicos. Abordaremos os princípios básicos, componentes essenciais e aplicações práticas no dia a dia profissional.</p>
+                        
+                        <h3>Tópicos abordados:</h3>
+                        <ul>
+                            <li>Conceitos fundamentais de hidráulica</li>
+                            <li>Componentes básicos de um sistema</li>
+                            <li>Tipos de sistemas hidráulicos</li>
+                            <li>Aplicações práticas</li>
+                        </ul>
+                    </div>
+
+                    <div class="lesson-navigation">
+                        <button class="btn secondary" id="prev-lesson" disabled>
+                            <i class="fas fa-chevron-left"></i> Aula Anterior
+                        </button>
+                        <button class="btn primary" id="next-lesson">
+                            Próxima Aula <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-sidebar">
+                    <div class="course-progress-card">
+                        <h3>Progresso do Curso</h3>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="course-progress-fill" style="width: 8%"></div>
+                            </div>
+                            <span class="progress-text" id="course-progress-text">8% concluído</span>
+                        </div>
+                    </div>
+
+                    <div class="lessons-sidebar">
+                        <h3>Todas as Aulas</h3>
+                        <div class="lessons-list" id="sidebar-lessons">
+                            <!-- Lista de aulas será carregada dinamicamente -->
+                        </div>
+                    </div>
+
+                    <div class="course-resources">
+                        <h3>Recursos da Aula</h3>
+                        <div class="resources-list">
+                            <a href="#" class="resource-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Material de Apoio (PDF)</span>
+                            </a>
+                            <a href="#" class="resource-item">
+                                <i class="fas fa-download"></i>
+                                <span>Exercícios Práticos</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer style="background-color: #2c2f33; color: #ffffff; padding: 40px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap;">
+            <div style="margin-right: 40px; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-start;">
+                <img src="/placeholder.svg?height=80&width=150" alt="UNIAQUA Logo" style="height: 80px;">
+                <img src="/placeholder.svg?height=70&width=150" alt="AQUASTAR Logo" style="height: 70px;">
+            </div>
+
+            <div style="margin-right: 40px;">
+                <h3 style="color: #ffffff; margin-bottom: 15px;">Links Rápidos</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="cursos.html" style="color: #ffffff; text-decoration: none;">Todos os Cursos</a></li>
+                    <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ffffff; text-decoration: none;">Contato</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 style="color: #ffffff; margin-bottom: 15px;">Contato</h3>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> marketing@aquastar.com.br</p>
+                    <p><i class="fas fa-phone"></i> (41) 3292-5653</p>
+                    <p><i class="fas fa-globe"></i> https://www.aquastar.com.br/</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid #444; margin-top: 40px; padding-top: 20px; text-align: center; font-size: 0.9em; color: #aaa;">
+            © 2025 UNIAQUA. Todos os direitos reservados.
+            <div style="margin-top: 10px;">
+                <a href="https://www.facebook.com/aquastarindeco" style="color: #ffffff; margin: 0 10px; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aquastar_ind/" style="color: #ffffff; margin: 0 10px; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/aquastar-industria/?viewAsMember=true" style="color: #ffffff; margin: 0 10px; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/@aquastarindustriaecomercio6803" style="color: #ffffff; margin: 0 10px; text-decoration: none;"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/aula.js"></script>
+</body>
+</html>
